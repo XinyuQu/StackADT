@@ -120,7 +120,7 @@ class MidStackADT():
     return(self.Deque.items[self.right - 1])
   
   def _balance_stack_deque(self):
-    if self.Stack.size < self.Deque.size:
+    while self.Stack.size < self.Deque.size:
       self.Stack.push(self.Deque.popleft())
   
   def push(self, element):
